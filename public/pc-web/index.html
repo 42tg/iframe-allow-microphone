@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PCWeb</title>
+    <script type="text/javascript">
+      function getMicrophoneAccess(target) {
+        navigator.mediaDevices
+          .getUserMedia({ audio: true, video: false })
+          .then(() => {
+            console.log("Microphone access successful");
+          })
+          .catch(err => {
+            console.log("Something went wrong", err);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>PCWeb.</h1>
+      <button onClick="getMicrophoneAccess()">
+        Access your microphone
+      </button>
+    </div>
+  </body>
+</html>
