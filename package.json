@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"http-server ./public/ms-dynamics -p 3000\" \"http-server ./public/pc-web -p 9000\""
+    "start": "concurrently \"http-server ./public/outer -p 3000\" \"http-server ./public/inner -p 9000\""
   },
   "author": "",
   "license": "ISC",

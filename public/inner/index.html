@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Inner Frame</title>
+    <script type="text/javascript">
+      function getMicrophoneAccess() {
+        navigator.mediaDevices
+          .getUserMedia({ audio: true, video: false })
+          .then(() => {
+            document.querySelector("#access").textContent = "Access Granted";
+          })
+          .catch(err => {
+            document.querySelector("#access").textContent = "No Access";
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Inner Frame</h1>
+      <button onClick="getMicrophoneAccess()">
+        Access your microphone
+      </button>
+      <div id="access"></div>
+    </div>
+  </body>
+</html>

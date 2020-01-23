@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Outer Frame</title>
+    <style>
+      #app {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Outer Frame</h1>
+    <div id="app">
+      <div>
+        <h1>Not working</h1>
+        <iframe
+          allow="camera; microphone *"
+          src="http://localhost:9000/"
+          style="border:2px #000000 solid;"
+          scrolling="no"
+          frameborder="1"
+          marginheight="0px"
+          marginwidth="0px"
+          height="800"
+          width="600"
+        ></iframe>
+      </div>
+
+      <div>
+        <h1>Working</h1>
+        <iframe
+          allow="camera; microphone "
+          src="http://localhost:9000/"
+          style="border:2px #000000 solid;"
+          scrolling="no"
+          frameborder="1"
+          marginheight="0px"
+          marginwidth="0px"
+          height="800"
+          width="600"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
